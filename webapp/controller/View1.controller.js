@@ -90,6 +90,29 @@ function (Controller,MessageToast) {
                 }.bind(this);
                 reader.readAsText(oFile);
             }
+        },
+        onToggleFormat: function () {
+            var oView = this.getView();
+            var sJsonOutput = oView.byId("stringOutput").getValue();
+
+            try {
+                var oJsonObject = JSON.parse(sJsonOutput);
+
+                // Check if the JSON is already pretty-printed
+                if (sJsonOutput.includes("\n")) {
+                    // Unformat JSON
+                    var sUnformattedJson = JSON.stringify(oJsonObject);
+                    oView.byId("stringOutput").setValue(sUnformattedJson);
+                    MessageToast.show("JSON unformatted successfully!");
+                } else {
+                    // Format JSON
+                    var sFormattedJson = JSON.stringify(oJsonObject, null, 4);
+                    oView.byId("stringOutput").setValue(sFormattedJson);
+                    MessageToast.show("JSON formatted successfully!");
+                }
+            } catch (e) {
+                MessageToast.show("Invalid JSON content!");
+            }
         }
     
     });

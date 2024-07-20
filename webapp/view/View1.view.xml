@@ -27,6 +27,8 @@
              <Button text="Download" press="onDownload" />
              <ToolbarSpacer />
              <Button text="Copy" press="onCopy" />
+             <ToolbarSpacer />
+             <Button text="Toggle Format" press="onToggleFormat" />      
             </HBox>
 
             
