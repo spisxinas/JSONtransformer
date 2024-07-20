@@ -4,9 +4,8 @@
     xmlns:l="sap.ui.layout"
     xmlns:unified="sap.ui.unified"
     >
-   <l:VerticalLayout
-		class="sapUiContentPadding"
-		width="100%">
+   <Page title="JSON Transformer Tool">
+        <VBox class="sapUiContentPadding" width="100%">
             <HBox justifyContent="Center" width="100%">
             <Title text="JSON Transformer Tool" level="H1" titleStyle="H1" />
             </HBox>
@@ -33,6 +32,7 @@
             
             
 
-	</l:VerticalLayout>
+	  </VBox>
+    </Page>
 
 </mvc:View>

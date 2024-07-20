@@ -15,6 +15,14 @@ function (Controller,MessageToast) {
 
             try {
                 var oJsonObject = JSON.parse(sJsonInput);
+
+                // Check if the input is a stringified JSON object
+                if (typeof oJsonObject === "string") {
+                    // Try to parse the stringified JSON object
+                    JSON.parse(oJsonObject);
+                    throw new Error("Input is already a stringified JSON object");
+                }
+
                 var sJsonString = JSON.stringify(oJsonObject);
                 var sEscapedJsonString = JSON.stringify(sJsonString);
                 oView.byId("stringOutput").setValue(sEscapedJsonString);
