@@ -1,0 +1,38 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:unified="sap.ui.unified"
+    >
+   <l:VerticalLayout
+		class="sapUiContentPadding"
+		width="100%">
+            <HBox justifyContent="Center" width="100%">
+            <Title text="JSON Transformer Tool" level="H1" titleStyle="H1" />
+            </HBox>
+
+            <unified:FileUploader id="fileUploader" 
+                              change="onFileUpload"
+                              width="100%"
+                              placeholder="Upload a file"
+                              buttonText="Upload File"/>
+             
+			<TextArea id="jsonInput" width="100%" placeholder="Enter JSON here..." rows="15" />
+    
+            <Button text="JSON TO STRING" press="onTransform" type="Emphasized"/>
+            <Button text="STRING TO JSON" press="onReverseTransform" type="Emphasized"/>
+            
+            <TextArea id="stringOutput" width="100%" placeholder="Resulting String will appear here..." rows="15" editable="false"/>
+            
+            <HBox width="100%">
+             <Button text="Download" press="onDownload" />
+             <ToolbarSpacer />
+             <Button text="Copy" press="onCopy" />
+            </HBox>
+
+            
+            
+
+	</l:VerticalLayout>
+
+</mvc:View>
