@@ -10,13 +10,14 @@
             <Title text="JSON Transformer Tool" level="H1" titleStyle="H1" />
             </HBox>
 
-            <HBox width="100%">
+            <HBox width="100%" justifyContent="SpaceBetween">
             <unified:FileUploader id="fileUploader" 
-                              change="onFileUpload"                  
-                              placeholder="Upload a file"
-                              buttonText="Upload File"/>
-            <ToolbarSpacer width="10px"/>
-            <Button text="Clear" press="onClear" type="Emphasized"/>
+                                  change="onFileUpload"                  
+                                  placeholder="Upload a file"
+                                  buttonText="Upload File"
+                                  buttonType="Emphasized"/>   
+                
+            <Button text="Clear" press="onClear" type="transparent"  />
             </HBox>
              
 			<TextArea id="jsonInput" width="100%" placeholder="Enter JSON here..." rows="15" />
