@@ -15,7 +15,7 @@
                                   change="onFileUpload"                  
                                   placeholder="Upload a file"
                                   buttonText="Upload File"
-                                  buttonType="Emphasized"/>   
+                                  style="Emphasized"/>   
                 
             <Button text="Clear" press="onClear" type="transparent"  />
             </HBox>
