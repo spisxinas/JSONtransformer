@@ -113,6 +113,13 @@ function (Controller,MessageToast) {
             } catch (e) {
                 MessageToast.show("Invalid JSON content!");
             }
+        },
+        onClear: function () {
+            var oView = this.getView();
+            oView.byId("jsonInput").setValue("");
+            oView.byId("stringOutput").setValue("");
+            oView.byId("fileUploader").clear();
+            MessageToast.show("Content cleared!");
         }
     
     });
